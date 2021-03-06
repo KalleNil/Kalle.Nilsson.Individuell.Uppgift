@@ -163,6 +163,8 @@ public class Plånbok {
                 
                 }
                 break;
+                default:
+                    System.out.println("Skriv in ett gitligt alternativ!");
                     
                 
                 
