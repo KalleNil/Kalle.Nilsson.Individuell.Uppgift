@@ -174,5 +174,71 @@ public class Plånbok {
         
         
     }
+    //nya variabler som motsvarar respektive valör
+    public static void avslutaOchGeTillbakaPengar(){
+        int uttag1000sedel = 0;
+        int uttag500sedel = 0;
+        int uttag200sedel = 0;
+        int uttag100sedel = 0;
+        int uttag50sedel = 0;
+        int uttag20sedel = 0;
+        int uttag10Krona = 0;
+        int uttag5Krona = 0;
+        int uttag1Krona = 0;
+        //sparar värdet på pengarna som finns i automaten i en enskild variabel
+        int spararAutomatPengarna = automatPengar;
+        
+        //en while loop för att ge tillbaka pengar till användaren avrundat uppåt med hjälp av prioriterinsregeln
+        while (automatPengar>0){
+            if (automatPengar>=1000){
+                automatPengar += -1000;
+                uttag1000sedel += 1;
+                
+            }else if(automatPengar>=500){
+                automatPengar += -500;
+                uttag500sedel +=1;
+            }else if (automatPengar>=200){
+                automatPengar += -200;
+                uttag200sedel += 1;
+            }else if(automatPengar>=100){
+                automatPengar += -100;
+                uttag100sedel += 1;
+            }else if(automatPengar>=50){
+                automatPengar += -50;
+                uttag50sedel +=1;
+            }else if(automatPengar>=20){
+                automatPengar += -20;
+                uttag20sedel += 1;
+            }else if(automatPengar>=10){
+                automatPengar += -10;
+                uttag10Krona += 1;
+            }else if(automatPengar>=5){
+                automatPengar += -5;
+                uttag5Krona += 1;
+            }else{
+                automatPengar += -1;
+                uttag1Krona +=1;
+            }
+           
+                
+        
+        }
+         System.out.println("Du fick tillbaka totalt " + spararAutomatPengarna +" kr");
+            System.out.println( uttag1000sedel + ": stycken 1000 sedlar");
+            System.out.println( uttag500sedel + ": stycken 500 sedlar");
+            System.out.println( uttag200sedel + ": stycken 200 sedlar");
+            System.out.println( uttag100sedel + ": stycken 100 sedlar");
+            System.out.println( uttag50sedel + ": stycken 50 sedlar");
+            System.out.println( uttag20sedel + ": stycken 20 sedlar");
+            System.out.println( uttag10Krona + ": stycken 10kronor");
+            System.out.println( uttag5Krona + ": stycken 5kronor");
+            System.out.println( uttag1Krona + ": stycken enkronor");
+            Main.setIt = false;
+            
+        
+        
+        
+                
+        }
     
 }
