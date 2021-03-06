@@ -43,7 +43,7 @@ public class Meny {
                 valDricka();
                 break;
                 case "2":
-                    //här ska en metod från klassen Kläder implementeras
+                    valKläder();
             case "9":
                 Plånbok.mataInPengar();
                 break;
@@ -97,5 +97,41 @@ public class Meny {
         
         
         }
+    public static void valKläder(){
+        
+        
+        System.out.println("Dessa drickor finns tillgängliga för köp");
+        
+        
+        
+        
+        System.out.println("1. Hatt");
+        System.out.println("2. Tröja");
+        
+        
+        
+        
+        System.out.println("0. för att avsluta köpet");
+        
+        String userInput = scan.nextLine();
+        switch (userInput){
+            case "1":
+                Kläder.hatt.Description();
+                break;
+                case "2":
+                    
+                    Kläder.tröja.Description();
+                    break;
+                case "0":
+                    
+                    break;
+                
+                    
+                default:
+                    
+                    System.out.println("du skrev inte in ett av alternativen vänligen försök igen!");
+                    Meny.valDricka();
+        }
+    }
     
 }
