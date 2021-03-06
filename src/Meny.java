@@ -48,7 +48,7 @@ public class Meny {
                 Plånbok.mataInPengar();
                 break;
             case "0":
-                //här ska en metod från klassen Plånbok implementeras
+                Plånbok.avslutaOchGeTillbakaPengar();
                 break;
                     
                     
