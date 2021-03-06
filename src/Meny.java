@@ -40,12 +40,12 @@ public class Meny {
         String val = scan.nextLine();
         switch(val){
             case "1":
-                //här ska en metod från klassen Dricka implementeras
+                valDricka();
                 break;
                 case "2":
                     //här ska en metod från klassen Kläder implementeras
             case "9":
-                //här ska en metod från klassen Plånbok implementeras
+                Plånbok.mataInPengar();
                 break;
             case "0":
                 //här ska en metod från klassen Plånbok implementeras
