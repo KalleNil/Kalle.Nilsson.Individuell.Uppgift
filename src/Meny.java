@@ -28,7 +28,7 @@ public class Meny {
         System.out.println("0. för att avsluta ditt köp och få tillbaka dina pengar");       
         System.out.println("");
         System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        
+        System.out.println("Du har " + Plånbok.automatPengar +"kr i automaten"); //skriver ut saldot i automaten via variabeln automatPengar i Plånbok klassen
         System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         
         
@@ -57,5 +57,45 @@ public class Meny {
         }
         
     }
+    //Metod som körs ifall användaren väljer alternativet drickor i standardMeny metoden
+    public static void valDricka(){
+        
+        
+        System.out.println("Dessa drickor finns tillgängliga för köp");
+        
+        
+        
+        
+        System.out.println("1. cola");
+        System.out.println("2. fanta");
+        
+        
+        
+        
+        System.out.println("0. för att avsluta köpet");
+        
+        String userInput = scan.nextLine();
+        switch (userInput){
+            case "1":
+                Dricka.cola.Description();
+                break;
+                case "2":
+                    
+                    Dricka.fanta.Description();
+                    break;
+                case "0":
+                    
+                    break;
+                
+                    
+                default:
+                    
+                    System.out.println("du skrev inte in ett av alternativen vänligen försök igen!");
+                    Meny.valDricka();
+        }
+        
+        
+        
+        }
     
 }
