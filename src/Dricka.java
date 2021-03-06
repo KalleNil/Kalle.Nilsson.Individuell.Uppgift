@@ -34,7 +34,23 @@ public class Dricka extends Varor implements VarorFunktioner{
 
     @Override
     public void Buy() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Är du säker på att du vill köpa"+ " "+ namn + " för " + kostnad+" kr?");
+        System.out.println("1. Yes");
+        System.out.println("2. No");
+        
+        String buyOrNot = scan.nextLine();
+        if (buyOrNot.equals("1") && Plånbok.automatPengar >= kostnad){
+            Plånbok.automatPengar += -kostnad;
+            Use();
+        } else if (buyOrNot.equals("2")){
+            System.out.println("Du avbröt köpet");
+        } else if (buyOrNot.equals("1")){
+            System.out.println("Du har inte matat in tillräckligt med pengar till automaten");
+            
+        }else{
+            System.out.println("Du skrev inte in något av alternativen");
+        }
+        
     }
 
     @Override
