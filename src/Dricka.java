@@ -25,8 +25,10 @@ public class Dricka extends Varor implements VarorFunktioner{
     @Override
     
     public void Description() {
-        System.out.println(namn + " Är en väldigt " + beskrivning +" dryck som kostar " + kostnad );
+        System.out.println("-----------------------------------");
+        System.out.println(namn + " Är en väldigt " + beskrivning +" dryck som kostar " + kostnad + "kr");
         System.out.println("Vill du gå vidare till menyn för att köpa drycken?");
+        
         //kallar på Buy metoden för att säkerställa köpet
         Buy();
     
@@ -34,7 +36,7 @@ public class Dricka extends Varor implements VarorFunktioner{
 
     @Override
     public void Buy() {
-        System.out.println("Är du säker på att du vill köpa"+ " "+ namn + " för " + kostnad+" kr?");
+        System.out.println("Är du säker på att du vill köpa"+ " "+ namn + " för " + kostnad+"kr?");
         System.out.println("1. Yes");
         System.out.println("2. No");
         
@@ -42,6 +44,7 @@ public class Dricka extends Varor implements VarorFunktioner{
         if (buyOrNot.equals("1") && Plånbok.automatPengar >= kostnad){
             Plånbok.automatPengar += -kostnad;
             Use();
+            System.out.println("Och blev av med " + kostnad + " kr");
         } else if (buyOrNot.equals("2")){
             System.out.println("Du avbröt köpet");
         } else if (buyOrNot.equals("1")){
