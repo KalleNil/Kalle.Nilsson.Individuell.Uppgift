@@ -130,7 +130,7 @@ public class Meny {
                 default:
                     
                     System.out.println("du skrev inte in ett av alternativen vänligen försök igen!");
-                    Meny.valDricka();
+                    Meny.valKläder();
         }
     }
     
