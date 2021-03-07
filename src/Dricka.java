@@ -15,6 +15,7 @@ public class Dricka extends Varor implements VarorFunktioner{
     //scanner som fungerar i hela klassen
    Scanner scan = new Scanner(System.in);
    //2 instanser av Dricka
+   //Utanför någon metod och gjord som static för att nås i övriga klasser utan en instans
    public static Dricka cola = new Dricka(10, "cola", "söt");
    public static Dricka fanta = new Dricka(10, "fanta", "surt");
     
