@@ -13,19 +13,20 @@ import java.util.Scanner;
  */
 public class Kläder extends Varor implements VarorFunktioner{
    public static Scanner scan = new Scanner(System.in);
-   public static Dricka hatt = new Dricka(200, "cola", "stor mössa");
-   public static Dricka tröja = new Dricka(500, "fanta", "luvtröja");
+   public static Dricka hatt = new Dricka(200, "mössa", "stor mössa");
+   public static Dricka tröja = new Dricka(500, "tröja", "luvtröja");
     
     public Kläder(int kostnad, String namn, String beskrivning) {
         super(kostnad, namn, beskrivning);
     }
 
     @Override
+    //Visar information om produkterna
     public void Description() {
         System.out.println("-----------------------------------");
         System.out.println(namn + " Är en väldigt " + beskrivning +" dryck som kostar " + kostnad + "kr" );
         System.out.println("Vill du gå vidare till menyn för att köpa drycken?");
-        
+        //kallar på Buy metoden för att säkerställa köpet
         Buy();
     }
 
@@ -34,7 +35,7 @@ public class Kläder extends Varor implements VarorFunktioner{
         System.out.println("Är du säker på att du vill köpa"+ " "+ namn + " för " + kostnad+"kr?");
         System.out.println("1. Yes");
         System.out.println("2. No");
-        
+        //genomför köpet ifall användaren matar in "1" och har tillräckligt med pengar i automaten
         String buyOrNot = scan.nextLine();
         if (buyOrNot.equals("1") && Plånbok.automatPengar >= kostnad){
             Plånbok.automatPengar += -kostnad;
@@ -51,6 +52,7 @@ public class Kläder extends Varor implements VarorFunktioner{
     }
 
     @Override
+    //anropas ifall köpet går igenom
     public void Use() {
         System.out.println("Du tog på dig din mössa " + namn);
     }
