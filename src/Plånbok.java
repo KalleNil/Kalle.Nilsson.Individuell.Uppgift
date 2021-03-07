@@ -15,7 +15,7 @@ public class Plånbok {
     //scanner till valmöjlighet, går även att ärva från andra klasser med static..
     public static Scanner scan = new Scanner(System.in);
     
-    //Alla valörer med deras antal som värde
+    //Atribut av alla valörer med deras antal som värde
     public static int enKrona = 10;
     public static int femKrona = 10;
     public static int tioKrona = 10;
@@ -27,7 +27,7 @@ public class Plånbok {
     public static int tusenSedel =10;
     public static int automatPengar = 0;
     
-    //Metod för att kolla saldot av valörer i sin plånbok
+    //Metod för att kolla antalet valörer i sin plånbok
     public static void pengarIplånboken(){
         
         System.out.println("Din plånbok består av dessa valörer: ");
