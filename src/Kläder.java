@@ -12,9 +12,10 @@ import java.util.Scanner;
  * @author Kalle
  */
 public class Kläder extends Varor implements VarorFunktioner{
+    //Utanför någon metod och gjord som static för att nås i övriga klasser utan en instans
    public static Scanner scan = new Scanner(System.in);
-   public static Dricka hatt = new Dricka(200, "mössa", "stor mössa");
-   public static Dricka tröja = new Dricka(500, "tröja", "luvtröja");
+   public static Kläder hatt = new Kläder(200, "mössa", "mjuk");
+   public static Kläder tröja = new Kläder(500, "tröja", "skön");
     
     public Kläder(int kostnad, String namn, String beskrivning) {
         super(kostnad, namn, beskrivning);
@@ -24,8 +25,8 @@ public class Kläder extends Varor implements VarorFunktioner{
     //Visar information om produkterna
     public void Description() {
         System.out.println("-----------------------------------");
-        System.out.println(namn + " Är en väldigt " + beskrivning +" dryck som kostar " + kostnad + "kr" );
-        System.out.println("Vill du gå vidare till menyn för att köpa drycken?");
+        System.out.println(namn + " Är en väldigt " + beskrivning +" sak som kostar " + kostnad + "kr" );
+        System.out.println("Vill du gå vidare till menyn för att köpa plagget?");
         //kallar på Buy metoden för att säkerställa köpet
         Buy();
     }
@@ -54,7 +55,7 @@ public class Kläder extends Varor implements VarorFunktioner{
     @Override
     //anropas ifall köpet går igenom
     public void Use() {
-        System.out.println("Du tog på dig din mössa " + namn);
+        System.out.println("Du tog på dig din " + namn);
     }
     
 }
