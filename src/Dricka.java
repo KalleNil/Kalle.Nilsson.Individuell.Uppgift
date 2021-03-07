@@ -23,7 +23,7 @@ public class Dricka extends Varor implements VarorFunktioner{
     }
 
     @Override
-    
+    //Visar information om produkterna
     public void Description() {
         System.out.println("-----------------------------------");
         System.out.println(namn + " Är en väldigt " + beskrivning +" dryck som kostar " + kostnad + "kr");
@@ -41,6 +41,7 @@ public class Dricka extends Varor implements VarorFunktioner{
         System.out.println("2. No");
         
         String buyOrNot = scan.nextLine();
+        //genomför köpet ifall användaren matar in "1" och har tillräckligt med pengar i automaten
         if (buyOrNot.equals("1") && Plånbok.automatPengar >= kostnad){
             Plånbok.automatPengar += -kostnad;
             Use();
@@ -57,6 +58,7 @@ public class Dricka extends Varor implements VarorFunktioner{
     }
 
     @Override
+    //anropas ifall köpet går igenom
     public void Use() {
         
         System.out.println("Du drack upp en 50cl " + namn);
