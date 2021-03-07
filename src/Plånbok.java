@@ -260,6 +260,7 @@ public class Plånbok {
             System.out.println( uttag10Krona + ": stycken 10kronor");
             System.out.println( uttag5Krona + ": stycken 5kronor");
             System.out.println( uttag1Krona + ": stycken enkronor");
+            //stoppar while loopen i main metoden
             Main.setIt = false;
             
         
