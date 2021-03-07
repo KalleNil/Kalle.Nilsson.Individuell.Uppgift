@@ -66,7 +66,7 @@ public class Plånbok {
         int inmatning = scan.nextInt();
         switch (inmatning){
             case 1:
-                System.out.println("Skriv antalet enkronor du vill mata in, du har " + enKrona + " stycken just nu");
+                System.out.println("Skriv antalet 1 kronor du vill mata in, du har " + enKrona + " stycken just nu");
                 int kollaValörSaldo = scan.nextInt();
                 
                 if (kollaValörSaldo>enKrona){
@@ -83,7 +83,7 @@ public class Plånbok {
                 System.out.println(inmatning);
                 break;
                 case 2:
-                    System.out.println("Skriv antalet enkronor du vill mata in, du har " + femKrona + " stycken just nu");
+                    System.out.println("Skriv antalet 5 kronor du vill mata in, du har " + femKrona + " stycken just nu");
                 int kollaValörSaldo5Kronor = scan.nextInt();
                 
                 if (kollaValörSaldo5Kronor>femKrona){
@@ -99,7 +99,7 @@ public class Plånbok {
                 
                 
                 case 3:
-                System.out.println("Skriv antalet enkronor du vill mata in, du har " + tioKrona + " stycken just nu");
+                System.out.println("Skriv antalet 10 kronor du vill mata in, du har " + tioKrona + " stycken just nu");
                 int kollaValörSaldo10Kronor = scan.nextInt();
                 
                 if (kollaValörSaldo10Kronor>tioKrona){
@@ -112,7 +112,7 @@ public class Plånbok {
                 }
                 break;
                 case 4:
-                System.out.println("Skriv antalet enkronor du vill mata in, du har " + tjugoSedel + " stycken just nu");
+                System.out.println("Skriv antalet 20 sedlar du vill mata in, du har " + tjugoSedel + " stycken just nu");
                 int kollaValörSaldo20Sedel = scan.nextInt();
                 
                 if (kollaValörSaldo20Sedel>tjugoSedel){
@@ -125,7 +125,7 @@ public class Plånbok {
                 }
                 break;
                 case 5:
-                System.out.println("Skriv antalet enkronor du vill mata in, du har " + femtioSedel + " stycken just nu");
+                System.out.println("Skriv antalet 50 sedlar du vill mata in, du har " + femtioSedel + " stycken just nu");
                 int kollaValörSaldo50Sedel = scan.nextInt();
                 
                 if (kollaValörSaldo50Sedel>femtioSedel){
@@ -138,7 +138,7 @@ public class Plånbok {
                 }
                 break;
                 case 6:
-                System.out.println("Skriv antalet enkronor du vill mata in, du har " + hundraSedel + " stycken just nu");
+                System.out.println("Skriv antalet 100 sedlar du vill mata in, du har " + hundraSedel + " stycken just nu");
                 int kollaValörSaldo100Sedel = scan.nextInt();
                 
                 if (kollaValörSaldo100Sedel>hundraSedel){
@@ -151,7 +151,7 @@ public class Plånbok {
                 }
                 break;
                 case 7:
-                System.out.println("Skriv antalet enkronor du vill mata in, du har " + tvåhundraSedel + " stycken just nu");
+                System.out.println("Skriv antalet 200 sedlar du vill mata in, du har " + tvåhundraSedel + " stycken just nu");
                 int kollaValörSaldo200Sedel = scan.nextInt();
                 
                 if (kollaValörSaldo200Sedel>tvåhundraSedel){
@@ -160,6 +160,32 @@ public class Plånbok {
                 } else{
                     tvåhundraSedel = tvåhundraSedel - kollaValörSaldo200Sedel;
                 automatPengar += kollaValörSaldo200Sedel * 200;
+                
+                }
+                break;
+                case 8:
+                System.out.println("Skriv antalet 500 sedlar du vill mata in, du har " + femhundraSedel + " stycken just nu");
+                int kollaValörSaldo500Sedel = scan.nextInt();
+                
+                if (kollaValörSaldo500Sedel>femhundraSedel){
+                    System.out.println("!!!Du kan inte mata in mer mynt än du har i plånboken!!!");
+                    
+                } else{
+                    femhundraSedel = femhundraSedel - kollaValörSaldo500Sedel;
+                automatPengar += kollaValörSaldo500Sedel * 500;
+                
+                }
+                break;
+                case 9:
+                System.out.println("Skriv antalet 500 sedlar du vill mata in, du har " + tusenSedel + " stycken just nu");
+                int kollaValörSaldo1000Sedel = scan.nextInt();
+                
+                if (kollaValörSaldo1000Sedel>tusenSedel){
+                    System.out.println("!!!Du kan inte mata in mer mynt än du har i plånboken!!!");
+                    
+                } else{
+                    tusenSedel = tusenSedel - kollaValörSaldo1000Sedel;
+                automatPengar += kollaValörSaldo1000Sedel * 1000;
                 
                 }
                 break;
@@ -188,7 +214,8 @@ public class Plånbok {
         //sparar värdet på pengarna som finns i automaten i en enskild variabel
         int spararAutomatPengarna = automatPengar;
         
-        //en while loop för att ge tillbaka pengar till användaren avrundat uppåt med hjälp av prioriterinsregeln
+        //en while loop för att ge tillbaka pengar till användaren
+        //avrundat uppåt med hjälp av prioriterinsregeln i if satserna
         while (automatPengar>0){
             if (automatPengar>=1000){
                 automatPengar += -1000;
