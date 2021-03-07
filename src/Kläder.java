@@ -22,14 +22,16 @@ public class Kläder extends Varor implements VarorFunktioner{
 
     @Override
     public void Description() {
-        System.out.println(namn + " Är en väldigt " + beskrivning +" dryck som kostar " + kostnad );
+        System.out.println("-----------------------------------");
+        System.out.println(namn + " Är en väldigt " + beskrivning +" dryck som kostar " + kostnad + "kr" );
         System.out.println("Vill du gå vidare till menyn för att köpa drycken?");
+        
         Buy();
     }
 
     @Override
     public void Buy() {
-        System.out.println("Är du säker på att du vill köpa"+ " "+ namn + " för " + kostnad+" kr?");
+        System.out.println("Är du säker på att du vill köpa"+ " "+ namn + " för " + kostnad+"kr?");
         System.out.println("1. Yes");
         System.out.println("2. No");
         
